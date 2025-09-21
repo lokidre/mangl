@@ -1,0 +1,44 @@
+packet: 
+  header:
+    - include: state.hpp
+    - include: main_types.hpp
+    - include: apeal/singleton.hpp
+
+  root:
+    name: projectFilesState
+    object: ProjectFilesState
+
+  objects: 
+    - object: ProjectFilesState
+      properties:
+        - name: selectedCat
+          id: 1
+          sourceType: ProjectCategory
+          packetType: int
+
+        - name: fileContainers
+          id: 2
+          type: array
+          array: stdarray
+          elemType: ProjectCategoryState
+
+    - object: ProjectCategoryState
+      properties: 
+        - name: selectedIndex
+          id : 3
+          defaultValue: -1
+
+        - name: files
+          id: 4
+          type: array
+          array: vector
+          elemType: ProjectFileState
+
+    - object: ProjectFileState
+      properties: 
+        - name: title
+          id: 5
+        - name: name
+          id: 6
+        - name: path
+          id: 7      

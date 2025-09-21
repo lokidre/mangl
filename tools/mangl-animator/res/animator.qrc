@@ -1,0 +1,7 @@
+<RCC>
+	<qresource>
+		<file alias="icon">icon-256.png</file>
+		<file alias="tex_animator.png">tex_animator.png</file>
+		<file alias="tex_animator.yaml">tex_animator.yaml</file>
+	</qresource>
+</RCC>

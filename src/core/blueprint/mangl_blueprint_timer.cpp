@@ -1,0 +1,28 @@
+/**************************************************************************
+ *   MANGL - Mobile Application and Game Libray                           *
+ *   Copyright (C) 2009-2025 Andrei Mirzoyan                              * 
+ *                                                                        *
+ *   This Source Code Form is subject to the terms of the Mozilla Public  *
+ *   License, v. 2.0. If a copy of the MPL was not distributed with this  *
+ *   file, You can obtain one at http://mozilla.org/MPL/2.0/.             *
+ **************************************************************************/
+#include "mangl_blueprint.h"
+
+namespace mangl::blueprint {
+
+void Engine::onTimerPostfix(Timestamp timestamp)
+{
+    if (startScheduled_ && timestamp >= startScheduleTime_) {
+        startScheduled_ = false;
+        started_ = true;
+    }
+
+
+    if (started_ && debugUpdatePending_) {
+        debugUpdatePending_ = false;
+        updateDebugStatus();
+    }
+
+}
+
+}  // namespace mangl::blueprint

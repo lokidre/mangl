@@ -1,0 +1,21 @@
+[
+    { "name": "section", "value": "section1", "descr": ""},
+    { "name": "var01", "value": "newVal01", "descr": ""},
+    { "name": "var02", "value": "newVal02", "descr": ""},
+    { "name": "var03", "value": "newVal03", "descr": ""},
+
+    { "name": "section", "value": "section2", "descr": ""},
+    { "name": "var11", "value": "newVal11", "descr": ""},
+    { "name": "var12", "value": "newVal12", "descr": ""},
+    { "name": "var13", "value": "newVal13", "descr": ""},
+
+    { "name": "section", "value": "section3", "descr": ""},
+    { "name": "var21", "value": "newVal21", "descr": ""},
+    { "name": "var22", "value": "newVal22", "descr": ""},
+    { "name": "var23", "value": "newVal23", "descr": ""},
+    
+    { "name": "section", "value": "section4", "descr": ""},
+    { "name": "var31", "value": "newVal31", "descr": ""},
+    { "name": "var32", "value": "newVal32", "descr": ""},
+    { "name": "var33", "value": "newVal33", "descr": ""}
+]

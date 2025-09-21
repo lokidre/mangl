@@ -1,0 +1,8 @@
+sources: 
+
+  - dir: src
+    prefix: ${CMAKE_CURRENT_LIST_DIR}/src
+    include_directories: ${CMAKE_CURRENT_LIST_DIR}/src
+    source_group: WorkshopScreen
+    mask: ["*.cpp", "*.c", "*.h", "*.hpp"]
+

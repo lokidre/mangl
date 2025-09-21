@@ -1,0 +1,58 @@
+project:
+  name: CircleSample
+  display_name: Circle Sample
+  version: "0.0.1"
+  build: 1
+
+  platform: iOS
+  deployment_target: "12.0"
+  targeted_device_family: "1"
+
+#  app_category: public.app-category.puzzle-games
+
+
+  other_cxxflags: "-faligned-allocation"
+
+  compile_definitions: 
+    - MANGL_NEED_ALIGNED_NEW=1
+    - GLES_SILENCE_DEPRECATION
+
+
+#  mangl_config: ${GENPROJ_PROJECT_CONFIG_DIR}/mangl_config.h
+
+
+#  app_icon_assets:        ${CONFIG_APP_ASSETS_DIR}/icon/pentix_nova/ios/Images.xcassets
+#  app_launch_storyboard:  ${CONFIG_APP_ASSETS_DIR}/launch/pentix_nova/ios/LaunchScreen.storyboard
+#  app_launch_assets:      ${CONFIG_APP_ASSETS_DIR}/launch/pentix_nova/ios/*.png
+
+xcode:
+#  product_bundle_identifier: com.mirzoyan.pentix-min
+  product_bundle_identifier: com.akatek.pentix-min
+
+  #development_team: U5448J2M89
+  # Akatek
+  development_team: 4YZ95B8AUF
+
+  infoplist_file: ${GENPROJ_PROJECT_CONFIG_DIR}/PentixDev-Info.plist
+  code_sign_entitlements: ${GENPROJ_PROJECT_CONFIG_DIR}/PentixDev.entitlements
+
+  validate_workspace_skipped_sdk_frameworks: [OpenGLES]
+
+
+  #clang_cxx_language_standard: c++2a
+
+  shared_frameworks: [
+    AudioToolbox, AVFoundation, CoreAudio, 
+    OpenAL,
+    CoreGraphics, CoreMedia, MediaPlayer, 
+#    OpenGLES, 
+    Metal, MetalKit,
+    MessageUI, 
+    QuartzCore, 
+    SystemConfiguration, 
+    UIKit]
+    
+#    GameKit,
+#    StoreKit, 
+
+  shared_libraries: [libsqlite3, libxml2, libz]

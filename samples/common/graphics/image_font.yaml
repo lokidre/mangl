@@ -1,0 +1,6 @@
+font:
+  type: image
+  glyphs:
+    - char: A
+      files:
+        - $(IMAGES)/image_font_[01-03]

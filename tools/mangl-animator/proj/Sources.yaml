@@ -1,0 +1,125 @@
+#--- !!python/object:__main__.SourceGroup
+
+# Source configuration file
+--- !SourceGroup
+dir: ${GENPROJ_PROJECT_CONFIG_DIR}
+prefix: ${GENPROJ_PROJECT_CONFIG_DIR}
+include_directories: ${GENPROJ_PROJECT_CONFIG_DIR}
+exclude_directories: ["_build*"]
+resource_group: Config
+files: [mangl_config.h]
+...
+
+--- !SourceGroup
+dir: ${GENPROJ_PROJECT_CONFIG_DIR}/../src
+prefix: ${GENPROJ_PROJECT_CONFIG_DIR}/../src
+include_directories: ${GENPROJ_PROJECT_CONFIG_DIR}/../src
+source_group: Animator
+mask: ["*.cpp", "*.h"]
+...
+
+#Resource files
+--- !SourceGroup
+dir: ${GENPROJ_PROJECT_CONFIG_DIR}/../res
+prefix: ${GENPROJ_PROJECT_CONFIG_DIR}/../res
+include_directories: ${GENPROJ_PROJECT_CONFIG_DIR}/../res
+resource_group: Textures
+files: [animator.rc, animator.qrc, resource.h]
+...
+
+
+#
+# Mangl
+#
+
+--- !SourceGroup
+dir: ${CONFIG_MANGL_DIR}/src/core
+source_group: Mangl/core
+mask: ["*.cpp", "*.h", "*.hpp"]
+...
+
+--- !SourceGroup
+dir: ${CONFIG_MANGL_DIR}/include
+source_group: Mangl/include
+mask: ["*.h", "*.hpp"]
+...
+
+--- !SourceGroup
+if: WIN32 OR ANDROID
+dir: ${CONFIG_MANGL_DIR}/src/3rdparty
+source_group: Mangl/3rdparty
+mask: ["sqlite3.*"]
+...
+
+--- !SourceGroup
+if: APPLE
+dir: ${CONFIG_MANGL_DIR}/src/3rdparty
+source_group: Mangl/3rdparty
+compile_options: -w
+mask: ["sqlite3.*"]
+...
+
+
+# iOS
+--- !SourceGroup
+if: IOS
+dir: ${CONFIG_MANGL_DIR}/src/ios
+source_group: Mangl/ios
+mask: ["*.cpp", "*.mm", "*.h", "*.hpp"]
+...
+
+# iOS and MacOS
+--- !SourceGroup
+if: APPLE
+dir: ${CONFIG_MANGL_DIR}/src/apple
+source_group: Mangl/Apple
+mask: ["*.cpp", "*.mm", "*.h", "*.hpp", "*.swift", "*.metal"]
+...
+
+# MacOS
+--- !SourceGroup
+if: MACOS
+dir: ${CONFIG_MANGL_DIR}/src/macos
+source_group: Mangl/Mac
+mask: ["*.cpp", "*.mm", "*.h", "*.hpp"]
+...
+
+
+# Windows group
+--- !SourceGroup
+if: WIN32
+dir: ${CONFIG_MANGL_DIR}/src/windows
+source_group: Mangl/Windows
+mask: ["*.cpp", "*.h", "*.hpp"]
+...
+
+
+#
+# Apeal
+#
+--- !SourceGroup
+dir: ${CONFIG_APEAL_DIR}/src
+source_group: Apeal/src
+files: [apeal_uid.cpp, apeal_uuid.cpp, apeal_base58.cpp]
+...
+
+--- !SourceGroup
+#if: WIN32
+dir: ${CONFIG_APEAL_DIR}/src
+source_group: Apeal/src
+mask: ["apeal_image*.cpp"]
+...
+
+--- !SourceGroup
+dir: ${CONFIG_APEAL_DIR}/include/apeal
+source_group: Apeal/hpp
+mask: ["*.hpp", "*.h"]
+...
+
+
+# Cognit
+--- !SourceGroup
+dir: ${CONFIG_COGNIT_DIR}/include/cognit
+source_group: Cognit/hpp
+mask: ["*.hpp", "*.h"]
+...

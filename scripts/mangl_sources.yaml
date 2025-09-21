@@ -1,0 +1,170 @@
+sources:
+
+#
+# Mangl
+#
+  - dir: ${CONFIG_MANGL_SRC_DIR}/core
+    source_group: Mangl/core
+
+  - dir: ${CONFIG_MANGL_INCLUDE_DIR}
+    source_group: Mangl/include
+    include_directories: ${CONFIG_MANGL_INCLUDE_DIR}
+
+
+#
+# 3rd party packages
+#
+
+  #
+  # SQLite
+  #
+  - dir: ${CONFIG_MANGL_3RDPARTY_DIR}/sqlite
+    source_group: Mangl/3rdparty/sqlite
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}
+    disable_warnings: true
+    disable_pch: true
+    mask: ["sqlite3.*"]
+
+
+  #
+  # Flac audio format support
+  #
+  - dir: ${CONFIG_MANGL_3RDPARTY_DIR}/flac
+    source_group: Mangl/3rdparty/flac
+    include_directories: 
+      - ${CONFIG_MANGL_3RDPARTY_DIR}/flac
+      - ${CONFIG_MANGL_3RDPARTY_DIR}/flac/libFLAC/include
+      - ${CONFIG_MANGL_3RDPARTY_DIR}/flac/ogg/include
+    compile_definitions: [FLAC__NO_DLL, FLAC__HAS_OGG]
+    disable_warnings: true
+    disable_pch: true
+
+
+
+  # iOS
+  - if: IOS
+    dir: ${CONFIG_MANGL_SRC_DIR}/ios
+    source_group: Mangl/ios
+    mask: ["*.cpp", "*.mm", "*.h", "*.hpp"]
+
+
+  # iOS and MacOS
+  - if: APPLE AND NOT CONFIG_TARGET_CONSOLE
+    dir: ${CONFIG_MANGL_SRC_DIR}/apple
+    source_group: Mangl/apple
+    mask: ["*.cpp", "*.mm", "*.h", "*.hpp", "*.swift", "*.metal"]
+
+
+  # MacOS
+  - if: MACOS AND NOT CONFIG_TARGET_CONSOLE
+    dir: ${CONFIG_MANGL_SRC_DIR}/macos
+    source_group: Mangl/macos
+
+
+  # Android
+  - if: ANDROID
+    dir: ${CONFIG_MANGL_SRC_DIR}/android
+    source_group: Mangl/android
+
+  # Linux group
+  - if: LINUX
+    dir: ${CONFIG_MANGL_SRC_DIR}/linux
+    source_group: Mangl/linux
+
+
+
+  - if: CONFIG_MANGL_GTK
+    dir: ${CONFIG_MANGL_SRC_DIR}/gtk
+    source_group: Mangl/gtk
+    compile_definitions: MANGL_GTK=1
+    packages:
+      - name: GTK
+        libs: gtk4
+
+
+#
+# SDL. Can be used on Windows too
+#
+  - if: CONFIG_MANGL_SDL
+    dir: ${CONFIG_MANGL_SRC_DIR}/sdl
+    source_group: Mangl/sdl
+
+#
+# OpenGL Rendering
+#
+  - if: NOT APPLE AND NOT ANDROID
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/glew
+    source_group: Mangl/3rdparty/glew
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}/glew
+    compile_definitions: [GLEW_STATIC]
+    disable_warnings: true
+    disable_pch: true
+
+
+
+#
+# Multiplayer support
+#
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_IXWEBSOCKET
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/ixwebsocket
+    source_group: Mangl/3rdparty/ixwebsocket
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_IXWEBSOCKET
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/mbedtls
+    source_group: Mangl/3rdparty/mbedtls
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}/mbedtls
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/uwebsockets
+    source_group: Mangl/3rdparty/uwebsockets
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/usockets
+    source_group: Mangl/3rdparty/usockets
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}/usockets
+    compile_definitions: [LIBUS_NO_SSL]
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/include
+    source_group: Mangl/3rdparty/libuv/include
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/include
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/src
+    source_group: Mangl/3rdparty/libuv/src
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS AND WIN32
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/win
+    source_group: Mangl/3rdparty/libuv/win
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS AND UNIX
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/unix
+    source_group: Mangl/3rdparty/libuv/unix
+    compile_definitions: [_GNU_SOURCE]
+    disable_warnings: true
+    disable_pch: true
+
+
+  # Windows group
+  - if: WIN32
+    dir: ${CONFIG_MANGL_SRC_DIR}/windows
+    source_group: Mangl/windows
+
+  # WebAssembly
+  - if: EMSCRIPTEN
+    dir: ${CONFIG_MANGL_SRC_DIR}/wasm
+    source_group: Mangl/wasm

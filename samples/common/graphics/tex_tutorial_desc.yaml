@@ -1,0 +1,41 @@
+
+defines:
+  - name: ROOT
+    value: .
+  - name: OUTPUT
+    value: $(ROOT)
+  - name: INPUT
+    value: $(ROOT)/render
+  - name: IMAGES
+    value: $(ROOT)/render/images
+  - name: FONTS
+    value: $(ROOT)/render/fonts
+
+class:
+  name: TutorialTexture
+
+output:
+  file: $(OUTPUT)/tex_tutorial
+  size: 1024
+
+
+fonts:
+#  - name: guiFont
+#    file: $FONTS/OpenSans-Regular.yaml
+
+  - name: guiFont
+    file: $FONTS/guiFont.yaml
+
+  - name: imageFont
+    file: ./image_font.yaml
+
+
+images:
+
+  - name: tutorialImage1
+    file: $INPUT/tutorial_image_1
+
+  - name: tutorialImage2
+    file: $INPUT/tutorial_image_2
+
+

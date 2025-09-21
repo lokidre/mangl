@@ -1,0 +1,11 @@
+textures:
+  - file: texture.png
+    size: [2048,2048]
+    image_format: RGBA
+    density: 1
+    total_images: 1
+    images:
+      - name: lenna
+        hash: dba40fc69459b61e13a59a07a8bfcf01d2a0fcee0d9ad93e9078dbccbba46d6c
+        coords:
+          - rect: [2,1,1024,1024]

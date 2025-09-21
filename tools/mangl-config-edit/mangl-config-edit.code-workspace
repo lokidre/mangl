@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.yarn": true,
+			"**/yarn.lock": true,
+			"**/.webpack": true,
+			"**/dist": true,
+			"**/node_modules": true,
+			"**/out": true
+		}
+	}
+}

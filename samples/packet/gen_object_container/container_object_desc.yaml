@@ -1,0 +1,60 @@
+packet:
+  header:
+    - include: ../container_object.h
+
+  root:
+    name: ContainerObject
+    namespace: container_test
+
+  objects:
+    - name: ContainerObject
+      fields: [charVal, ucharVal, intVal, uintVal, doubleVal]
+      properties:
+        - name: podVector
+          type: vector
+          valueType: ContainerPodValue
+
+        - name: vecVector
+          type: vector
+          valueType: ContainerVectorValue
+
+        - name: intArray
+          type: array
+
+        - name: podArray
+          type: array
+          valueType: ContainerPodValue
+
+        - name: mapIntInt
+          type: map
+
+        - name: mapIntStruct
+          type: map
+          valueType: ContainerPodValue
+
+        - name: mapStringStruct
+          type: map
+          valueType: ContainerPodValue
+
+        - name: complexVector
+          type: vector
+          valueType: ContainerVectorObjectValue
+
+
+    - name: ContainerPodValue
+      fields: [intVal, doubleVal]
+
+    - name: ContainerVectorValue
+      properties:
+        - name: podVecVal
+          type: vector
+
+    - name: ContainerComplexValue
+      fields: [intVal, doubleVal, stringVal]
+
+    - name: ContainerVectorObjectValue
+      properties:
+        - name: complexVecVal
+          type: vector
+          valueType: ContainerComplexValue
+

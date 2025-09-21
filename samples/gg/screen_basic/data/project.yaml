@@ -1,0 +1,144 @@
+project:
+  - id: 1
+    title: screen basic
+    layout:
+      size: [320,480]
+      orientation: portrait
+      constraint: height
+    screens:
+      - id: 2
+        title: start screen 
+        viewPort:
+          x: 10
+          y: 20
+          #size: [160,240]  
+        layers:
+          - id: 12
+            name: background rectangles
+            componentsId: [4, 5]  
+            visable: true
+          - id: 13
+            name: game images
+            componentsId: [8,9] 
+            visable: true
+        worlds: 
+          - id: 3
+            title: main world
+            size: [640,960]
+            components:
+              - id: 4 
+                type: rectangle
+                visable: true
+                left: 80
+                #right: 40
+                top: 30% 
+                #bottom: 20%
+                width: 50 
+                height: 100
+                alignHorz: left
+                alignVert: top
+                backgroundColor: ["FF0000","0000FF","00FF00"]
+                color: ["FF0000","0000FF"]
+              # fillType:
+                border: 
+                  size: 2
+                  color: ["00FF00"]
+                  style: solid
+              - id: 5 
+                type: rectangle
+                visable: true
+                left: 10
+                right: 30
+                top: 20% 
+                bottom: 10%
+                width: 250 
+                height: 360              
+                #alignHorz: left
+                #alignVert: center
+                backgroundColor: ["FF0000","0000FF","00FF00"]
+                color: ["FF0000","0000FF"]
+              # fillType:
+                border: 
+                  size: 2
+                  color: ["00FF00"]
+                  style: solid
+              - id: 6
+                type: label 
+                visable: true
+                top: 40
+                #bottom: 100
+                #left: 10%
+                right: 25%
+                height: 40
+                name: gui_font_medium
+                text: Welcome
+                color: ["00FF00"]
+                alignHorz: right
+                alignVert: bottom
+              - id: 7
+                type: label 
+                visable: true
+                #top: 40
+                bottom: 100
+                left: 10%
+                #right: 25%
+                height : 20
+                name: gui_font_medium
+                text: Hi
+                color: ["0000FF"]
+                alignVert: top
+                alignHorz: center
+              - id: 8
+                type: image
+                visable: true
+                name: pentix_title
+                width: 300
+                height: 100
+                top: 45%
+                #bottom:
+                left: 20%
+                #right: 
+                alignHorz: left
+                alignVert: middle
+                #src:
+                #md5:
+              - id: 9
+                type: image
+                visable: true
+                name: tutorial_finger
+                width: 180
+                height: 60
+                #top: 45%
+                bottom: 5%
+                #left: 20%
+                right: 40 
+                #alignHorz: center
+                #alignVert: top
+                #src:
+                #md5:
+              - id: 10
+                type: button
+                visable:  true
+                name: small_button_sounds_off
+                top: 90%
+                #bottom:
+                left: 50%
+                #right:
+                width: 30
+                height: 30
+                #src:
+                #md5:
+              - id: 11
+                type: button
+                visable: true
+                name: small_button_sounds
+                top: 80%
+                #bottom:
+                left: 60%
+                #right:
+                width: 30
+                height: 30
+                #src:
+                #md5:
+
+

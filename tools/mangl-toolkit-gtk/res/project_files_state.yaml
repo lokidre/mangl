@@ -1,0 +1,30 @@
+packet:
+  header: 
+    - include: state.hpp
+
+  root:
+    name: ProjectFilesState
+    namespace: toolkit
+
+  objects:
+    - name: ProjectFilesState
+      properties: 
+        - name: selectedCat
+          type: enum
+          object: ProjectCategory
+          underlying: int
+        - name: fileContainers
+          type: array
+          valueType: ProjectCategoryState
+
+    - name: ProjectCategoryState
+      properties: 
+        - name: selectedIndex
+          defaultValue: -1
+        - name: currentDirectory
+        - name: files
+          type: vector
+          valueType: ProjectFileState
+
+    - name: ProjectFileState
+      fields: [title, name, path]

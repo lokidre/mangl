@@ -1,0 +1,6 @@
+build_from_source=true
+runtime=node-webkit
+
+#target=0.63.0
+
+

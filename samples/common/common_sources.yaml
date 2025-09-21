@@ -1,0 +1,30 @@
+sources:
+  - dir: ${CONFIG_MANGL_SAMPLES_DIR}/common/src
+    prefix: ${CONFIG_MANGL_SAMPLES_DIR}/common/src
+    include_directories: 
+      - "${CONFIG_MANGL_SAMPLES_DIR}/common/src"
+      - "${CONFIG_MANGL_SAMPLES_DIR}/common/generated"
+    source_group: Common
+
+# Windows
+  - if: WIN32
+    dir: ${CONFIG_MANGL_SAMPLES_DIR}/common
+    source_group: Common
+    files: [mangl-samples.win.manifest]
+
+
+
+# Textures
+  - dir: ${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/textures
+    bundle_group: Textures
+    bundle: ${BUNDLE_DIR}
+
+
+# Sounds and music
+  - dir: ${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/sounds/flac
+    bundle_group: Sounds
+    bundle: ${BUNDLE_DIR}
+
+  - dir: ${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/music/mp3
+    bundle: ${BUNDLE_DIR}
+    bundle_group: Music

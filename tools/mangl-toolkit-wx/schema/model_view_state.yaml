@@ -1,0 +1,49 @@
+packet: 
+  header:
+    - include: state.hpp
+    - include: main_types.hpp
+    - include: apeal/singleton.hpp
+    - include: mangl/packet.h
+
+  root:
+    name: modelViewState
+    object: ModelViewState
+
+  objects: 
+    - object: ModelViewState
+      properties: 
+        - name: ambientColor
+          id: 1
+          # sourceType: mangl::M::Black
+          # packetType: int
+          defaultSkip: true
+          defaultValue: mangl::M::Black
+
+        - name: diffuseColor
+          id: 2
+          # sourceType: mangl::M::Red
+          # packetType: int
+          defaultSkip: true
+          defaultValue: mangl::M::Red
+
+        - name: specularColor
+          id: 3
+          # sourceType: mangl::M::Blue
+          # packetType: int
+          defaultSkip: true
+          defaultValue: mangl::M::Blue
+
+        - name: shininess 
+          id: 4
+          defaultValue: 32
+        - name: wireframe
+          id: 5
+        - name: vertices
+          id: 6
+        - name: faceCulling
+          id: 7
+        - name: depthTest
+          id: 8
+        - name: lighting
+          id: 9
+   

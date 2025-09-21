@@ -1,0 +1,9 @@
+--- !Header
+vars:
+  - {name: var3, value: 3}
+  - {name: var4, value: some text 4}
+
+imports:
+  - blueprint_imported3.yaml
+...
+

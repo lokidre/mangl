@@ -1,0 +1,74 @@
+config:
+  sections:
+    - name: Application
+      description: Main Application Identification
+      properties:
+        - name: MANGL_APP_ID
+          description: Application Store Id
+          type: string
+          required: true
+
+        - name: MANGL_APP_TAG
+          description: Application Tag
+          type: string
+          required: true
+
+        - name: MANGL_APP_TITLE
+          description: Application Title
+          type: string
+
+    - name: Graphics
+      properties:
+        - name: MANGL_FPS
+          description: Preferred FPS (Frames Per Second)
+          type: integer
+                   
+
+
+    - name: Debugging
+      description: Application Debugging
+      properties:
+        - name: MANGL_DEBUG_FPS
+          description: Collect FPS (Frames Per Second) rendering stats
+          type: boolean
+
+        - name: MANGL_DEBUG_LOG_GRAPHICS
+          description: Print graphics stats
+          type: boolean
+
+        - name: MANGL_DEBUG_LOG_TOUCHES
+          description: Log user touches
+          type: boolean
+        
+        - name: MANGL_DEBUG_LOG_AUDIO
+          description: Log sound effects and music
+          type: boolean
+
+    - name: Local
+      tag: local
+      description: Local settings stored only on the local machine
+      properties:
+        - name: MANGL_LOCAL_APPLICATION_SIZE
+          description: Application Application Layout (Desktop only)
+          type: string
+
+
+
+    - name: Custom Section
+      custom: true
+      description: "hardDescription2"
+      properties:
+        - name: "hardVar2"
+          description: "V21 description"
+          # type: "selection" 
+          # selection: ["sel1", "sel12", "sel3"]
+        
+        - name: "Var22"
+          description: "V22 description"
+          type: "string" 
+          # selection: ["sel1", "sel12", "sel3"]
+       
+        - name: "newHard"
+          description: "descr"
+          type: "string" 
+

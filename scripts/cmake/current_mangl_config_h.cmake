@@ -1,0 +1,7 @@
+set(CONFIG_MANGL_CONFIG_H ${CMAKE_CURRENT_SOURCE_DIR}/mangl_config.h)
+add_compile_definitions(MANGL_CONFIG_H=${CONFIG_MANGL_CONFIG_H})
+get_filename_component(CONFIG_MANGL_CONFIG_DIR "${CONFIG_MANGL_CONFIG_H}" DIRECTORY )
+include_directories(${CONFIG_MANGL_CONFIG_DIR})
+set(src ${CONFIG_MANGL_CONFIG_H})
+list(APPEND main_SRC ${src})
+source_group(TREE ${CONFIG_MANGL_CONFIG_DIR} PREFIX "Source Files\\Config" FILES ${src})

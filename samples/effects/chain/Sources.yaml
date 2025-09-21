@@ -1,0 +1,23 @@
+#--- !!python/object:__main__.SourceGroup
+--- !SourceGroup
+dir: .
+name: "Source Files\\\\Main"
+includes: ["../.."]
+exclude: ["./_build/*"]
+mask: ["*.cpp", "*.h"]
+
+
+--- !SourceGroup
+dir: ../../../src/core
+name: "Source Files\\\\Mangl/Core"
+mask: ["*.cpp", "*.h"]
+
+--- !SourceGroup
+dir: ../../../include
+name: "Source Files\\\\Mangl/Include"
+mask: ["*.h"]
+
+--- !SourceGroup
+dir: ../../../src/windows
+name: "Source Files\\\\Mangl/Windows"
+mask: ["*.cpp", "*.c", "*.h"]

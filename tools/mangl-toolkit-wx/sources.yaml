@@ -1,0 +1,18 @@
+sources: 
+
+  - dir: src
+    prefix: ${CMAKE_CURRENT_LIST_DIR}/src
+    include_directories: ${CMAKE_CURRENT_LIST_DIR}/src
+    source_group: Toolkit
+#    mask: ["*.cpp", "*.c", "*.h", "*.hpp"]
+
+#  - dir: src/generated
+#    prefix: ${CMAKE_CURRENT_LIST_DIR}/src/generated
+#    source_group: Resources
+#    files: ["resource_styles.cpp", "resource_styles.h"]
+
+#  - dir: res
+#    prefix: ${CMAKE_CURRENT_LIST_DIR}/res
+#    bundle_group: Styles
+#    bundle: ${BUNDLE_DIR}
+#    mask: "*.css"

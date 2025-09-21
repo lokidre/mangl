@@ -1,0 +1,182 @@
+
+defines:
+  - name: ROOT
+    value: .
+  - name: OUTPUT
+    value: $ROOT/textures
+  - name: INPUT
+    value: $ROOT/render
+  - name: IMAGES
+    value: $INPUT/images
+  - name: FONTS
+    value: $INPUT/fonts
+
+class:
+  name: CommonTexture
+
+output:
+  file: $OUTPUT/tex_common
+  size: 1024
+
+fonts:
+  - name: guiFont
+    file: $FONTS/guiFont.yaml
+
+  - name: imageFont
+    file: ./image_font.yaml
+
+
+images:
+
+#
+# Buttons
+#
+
+  - name: button
+    files:
+      - $INPUT/button
+      - $INPUT/button_pressed
+      - $INPUT/button_disabled
+
+  # - name: button
+  #   file: $(INPUT)/button.png
+  # - name: button
+  #   file: $(INPUT)/button_pressed.png
+  # - name: button
+  #   file: $(INPUT)/button_disabled.png
+
+  - name: buttonLabel
+    files:
+      - $(INPUT)/button_label.png
+      - $(INPUT)/button_label_pressed.png
+      - $(INPUT)/button_label_disabled.png
+
+  - name: closeButton
+    file: $IMAGES/close_button_[01-02]
+
+  - name: backButton
+    file: $IMAGES/back_button_[01-02]
+
+
+  - name: checkbox
+    files:
+      - $(INPUT)/checkbox_on.png
+      - $(INPUT)/checkbox_off.png
+      - $(INPUT)/checkbox_on_pressed.png
+      - $(INPUT)/checkbox_off_pressed.png
+
+      # Corners: left top, right top, right bottom, left bottom
+  - name: buttonCorners
+    files:
+      - $(IMAGES)/button_border_01.png
+      - $(IMAGES)/button_border_04.png
+      - $(IMAGES)/button_border_12.png
+      - $(IMAGES)/button_border_10.png
+
+      # Borders: left, top, right, bottom
+  - name: buttonBorders
+    files:
+      - $IMAGES/button_border_05
+      - $IMAGES/button_border_02
+      - $IMAGES/button_border_07
+      - $IMAGES/button_border_11
+
+
+
+  - name: infoBlock
+    files: 
+      - $IMAGES/info_block_01
+      - $IMAGES/info_block_02
+      - $IMAGES/info_block_04
+
+#
+# Segmented widget
+#
+  - name: segmentedButtonFirst
+    files:
+      - $IMAGES/segmented_widget_01
+      - $IMAGES/segmented_widget_04
+      - $IMAGES/segmented_widget_07
+
+  - name: segmentedButton
+    files:
+      - $IMAGES/segmented_widget_02
+      - $IMAGES/segmented_widget_05
+      - $IMAGES/segmented_widget_08
+
+  - name: segmentedButtonLast
+    files:
+      - $IMAGES/segmented_widget_03
+      - $IMAGES/segmented_widget_06
+      - $IMAGES/segmented_widget_09
+
+#
+# Sample slider texture
+#
+  - name: slider
+    files:
+      - $IMAGES/slider_04  # button
+      - $IMAGES/slider_04  # pressed button
+      - $IMAGES/slider_02  # full
+      - $IMAGES/slider_06  # empty
+      - $IMAGES/slider_01  # begin (left)
+      - $IMAGES/slider_07  # end (right)
+
+
+  # - name: sliderLeft
+  #   file: $IMAGES/slider_01.png
+  # - name: sliderFull
+  #   file: $IMAGES/slider_02.png
+  # - name: sliderButton
+  #   file: $IMAGES/slider_04.png
+  # - name: sliderEmpty
+  #   file: $IMAGES/slider_06.png
+  # - name: sliderRight
+  #   file: $IMAGES/slider_07.png
+
+
+#
+# Settings screen
+#
+  - name: settingsSoundsCheckbox
+    file: $IMAGES/settings_screen_buttons_[01-04]
+  - name: settingsMusicCheckbox
+    file: $IMAGES/settings_screen_buttons_[05-08]
+
+  - name: settingsSlider
+    files: 
+      - $IMAGES/settings_screen_slider_04  # button
+      - $IMAGES/settings_screen_slider_04  # pressed button
+      - $IMAGES/settings_screen_slider_02  # full
+      - $IMAGES/settings_screen_slider_06  # empty
+      - $IMAGES/settings_screen_slider_01  # begin (left)
+      - $IMAGES/settings_screen_slider_07  # end (right)
+
+
+
+#
+# Textured Dialog Background
+#
+  - name: dialogBackgroundBorders
+    files:
+      - $IMAGES/dialog_background_09
+      - $IMAGES/dialog_background_03
+      - $IMAGES/dialog_background_11
+      - $IMAGES/dialog_background_16
+
+  - name: dialogBackgroundCorners
+    files:
+      - $IMAGES/dialog_background_01
+      - $IMAGES/dialog_background_05
+      - $IMAGES/dialog_background_17
+      - $IMAGES/dialog_background_15
+
+  - name: dialogBackgroundFill
+    file: $IMAGES/dialog_background_10
+
+
+#
+# Texture elements
+#
+  - name: brickCover
+    file: $INPUT/brick_cover.png

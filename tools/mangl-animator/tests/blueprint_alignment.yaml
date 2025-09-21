@@ -1,0 +1,25 @@
+- !Texture
+  name: ani
+  file: ":tex_animator"
+
+# - !Node
+#   id: tex1
+#   position: {x: 10%, y: 20}
+#   size: {w: 50%}
+#   image: ani.wood
+
+- !Node
+  id: box1
+  box: null
+  origin: center, middle
+  size: {w: 40, h: 40}
+  color: yellow
+
+- !Node
+  id: box2
+  box: null
+  origin: center, middle
+  align: right
+  position: 0, 60
+  size: {w: 40, h: 40}
+  color: blue

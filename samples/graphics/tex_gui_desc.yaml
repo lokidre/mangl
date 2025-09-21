@@ -1,0 +1,89 @@
+defines:
+  - name: ROOT
+    value: ~/dev/mangl/samples/graphics
+  - name: ROOT2
+    value: ~/Dropbox/irix/Evotek/chessdash
+    
+  - name: OUTPUT
+    value: $(ROOT)
+  - name: INPUT
+    value: $(ROOT2)/render
+  - name: IMAGES
+    value: $(ROOT2)/render/images
+  - name: FONTS
+    value: $(INPUT)/fonts
+
+output:
+  file: $(OUTPUT)/tex_gui
+  size: [256, 256]
+
+class:
+  name: GuiTexture
+  namespace: chessdash
+
+    
+images:
+# HomeScreen
+  - name: homeTitle
+    file: $INPUT/chessdash_title
+
+  - name: homePlayButtonLabel
+    file: $INPUT/home_play_button_label
+
+  - name: homeSoundsCheckbox
+    file: $IMAGES/home_screen_buttons_[01-04]
+  - name: homeSettingsButton
+    file: $IMAGES/home_screen_buttons_[07-08]
+  - name: homeTutorialButton
+    file: $IMAGES/home_screen_buttons_[05-06]
+
+
+#
+# Background
+#
+  - name: backgroundPaperElements
+    file: $IMAGES/background_paper_elements_[01-03]
+
+
+#
+# Navigation buttons
+#
+  - name: navBackButton
+    file: $INPUT/nav_back_button
+  - name: navCloseButton
+    file: $INPUT/nav_close_button
+
+
+
+  # - name: backgroundImage
+  #   file: $INPUT/background_image.png
+  # - name: backButton
+  #   file: $IMAGES/back_[01-03].png
+  # - name: closeButton
+  #   file: $IMAGES/close_[01-03].png
+  # - name: homeButton
+  #   file: $IMAGES/home_back_[01-03].png
+
+  - name: gameStartButtonLabel
+    file: $INPUT/game_start_button_label
+
+
+  #
+  # Screen button icons
+  #
+  - name: screenButtonIconVsComp
+    file: $IMAGES/select_buttons_icons_01
+  - name: screenButtonIconOneDevice
+    file: $IMAGES/select_buttons_icons_03
+  - name: screenButtonIconDash
+    file: $IMAGES/select_buttons_icons_04
+
+
+  - name: playerColorSelect
+    file: $IMAGES/player_color_select_[01-03]
+    
+  - name: difficultyDirectionLeft
+    file: $IMAGES/difficulty_left_right_01
+  - name: difficultyDirectionRight
+    file: $IMAGES/difficulty_left_right_02  
+  

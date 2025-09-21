@@ -1,0 +1,9 @@
+- !Texture
+  name: ani
+  file: ":tex_animator"
+
+- !Node
+  id: tex1
+  position: {x: 20, y: 20}
+  size: {w: 150}
+  image: ani.wood

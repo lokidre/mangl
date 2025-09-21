@@ -1,0 +1,27 @@
+packet:
+  header:
+    - include: pod_object.h
+
+  generate:
+    string: true
+    file: true
+
+  root:
+    name: PodObject
+
+  objects:
+    - name: PodObject
+      fields: [intVal, uintVal]
+      properties:
+        - name: longVal
+        - name: ulongVal
+        - name: shortVal
+        - name: ushortVal
+
+        - name: charVal
+          type: char
+        - name: ucharVal
+          type: char
+
+        - name: doubleVal
+        - name: floatVal

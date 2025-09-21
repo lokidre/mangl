@@ -1,0 +1,26 @@
+graphics:
+  texturesDir: "${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/textures"
+  renderDir: "${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/render"
+  renderFontsDir: "${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/render/fonts"
+  fontsDir: "${CONFIG_MANGL_ASSETS_DIR}/fonts"
+  srcGenDir: "${CONFIG_MANGL_SAMPLES_DIR}/common/generated"
+  defines:
+    - name: ROOT
+      value: "${CONFIG_MANGL_SAMPLES_ASSETS_DIR}"
+
+  #texmakeBin: 
+#  texmakeParams: --margin=1 --bleed=1
+
+  generator: zx genbuild.mjs
+
+  fonts:
+    - name: guiFont
+      file: Refrigerator_Deluxe_Bold.otf
+      #file: Oswald-Regular.ttf
+      # file: RobotoCondensed-SemiBold.ttf
+
+      height: 32
+
+  textures:
+    - name: tex_common
+    - name: tex_tutorial

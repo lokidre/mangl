@@ -1,0 +1,130 @@
+sources:
+
+    #
+    # Mangl Include
+    #
+  - dir: ${CONFIG_MANGL_DIR}/include
+    include_directories: ${CONFIG_MANGL_DIR}/include
+    source_group: Mangl/include
+
+
+    #
+    # Mangl Select Components
+    #
+
+  - dir: ${CONFIG_MANGL_DIR}/src/core
+    source_group: Mangl/core
+    recursive: false
+
+  - dir: ${CONFIG_MANGL_DIR}/src/core/app
+    source_group: Mangl/core/app
+
+  - dir: ${CONFIG_MANGL_DIR}/src/core/main
+    source_group: Mangl/core/main
+
+  - dir: ${CONFIG_MANGL_DIR}/src/core/framework
+    source_group: Mangl/core/framework
+
+  - dir: ${CONFIG_MANGL_DIR}/src/core/storage
+    source_group: Mangl/core/storage
+
+  - dir: ${CONFIG_MANGL_DIR}/src/core/packet
+    source_group: Mangl/core/packet
+
+
+  - if: CONFIG_PROJECT_MULTIPLAYER
+    dir: ${CONFIG_MANGL_DIR}/src/core/multiplayer
+    source_group: Mangl/core/multiplayer
+
+  - if: CONFIG_PROJECT_MULTIPLAYER
+    dir: ${CONFIG_MANGL_DIR}/src/core/network
+    source_group: Mangl/core/network
+
+
+
+#
+# 3rd party packages
+#
+  - dir: ${CONFIG_MANGL_3RDPARTY_DIR}/sqlite
+    source_group: Mangl/3rdparty/sqlite
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}
+    mask: ["sqlite3.*"]
+
+# MacOS
+  - if: APPLE AND NOT IOS
+    dir: ${CONFIG_MANGL_DIR}/src/macos
+    source_group: Mangl/macos
+    files:
+      - mangl_environment_mac.mm
+
+# Linux group
+  - if: LINUX
+    dir: ${CONFIG_MANGL_DIR}/src/linux
+    source_group: Mangl/linux
+    # files:
+    #   - mangl_linux_env.cpp
+
+# Windows group
+  - if: WIN32
+    dir: ${CONFIG_MANGL_DIR}/src/windows
+    source_group: Mangl/windows
+    files:
+      - mangl_win_env.cpp
+
+
+
+# 
+# Networking
+#
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_IXWEBSOCKET
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/ixwebsocket
+    source_group: Mangl/3rdparty/ixwebsocket
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_IXWEBSOCKET
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/mbedtls
+    source_group: Mangl/3rdparty/mbedtls
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}/mbedtls
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/uwebsockets
+    source_group: Mangl/3rdparty/uwebsockets
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/usockets
+    source_group: Mangl/3rdparty/usockets
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}/usockets
+    compile_definitions: [LIBUS_NO_SSL]
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/include
+    source_group: Mangl/3rdparty/libuv/include
+    include_directories: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/include
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/src
+    source_group: Mangl/3rdparty/libuv/src
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS AND WIN32
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/win
+    source_group: Mangl/3rdparty/libuv/win
+    disable_warnings: true
+    disable_pch: true
+
+  - if: CONFIG_PROJECT_MULTIPLAYER AND CONFIG_MANGL_UWEBSOCKETS AND UNIX
+    dir: ${CONFIG_MANGL_3RDPARTY_DIR}/libuv/unix
+    source_group: Mangl/3rdparty/libuv/unix
+    compile_definitions: [_GNU_SOURCE]
+    disable_warnings: true
+    disable_pch: true

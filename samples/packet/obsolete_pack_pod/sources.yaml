@@ -1,0 +1,8 @@
+sources:
+
+  - group: Main
+    dir: src
+    prefix: ${CMAKE_CURRENT_SOURCE_DIR}/src
+    include_directories: ["${CMAKE_CURRENT_SOURCE_DIR}/src"]
+    mask: ["*.cpp", "*.h", "*.hpp"]
+

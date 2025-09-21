@@ -1,0 +1,51 @@
+packet:
+  header:
+    - include: flat_object.h
+
+  generate:
+    string: true
+    file: true
+
+  root:
+    name: FlatObject
+
+  objects:
+    - name: FlatObject
+      fields: [intVal, uintVal]
+      properties:
+        - name: longVal
+        - name: ulongVal
+        - name: shortVal
+        - name: ushortVal
+        - name: doubleVal
+        - name: floatVal
+
+        - name: charVal
+          type: char
+        - name: ucharVal
+          type: char
+
+        - name: stringVal
+          type: string
+
+        - name: charEnum
+          type: enum
+          object: SampleCharEnum
+          underlying: char
+
+        - name: intEnum
+          type: enum
+          object: SampleIntEnum
+          underlying: int
+
+
+        - name: vectorVal
+          type: vector
+        - name: mapVal
+          type: map
+        - name: unorderedMapVal
+          type: map
+
+        - name: setVal
+          type: set
+          

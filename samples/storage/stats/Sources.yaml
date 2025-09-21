@@ -1,0 +1,44 @@
+#--- !!python/object:__main__.SourceGroup
+
+# Source configuration file
+--- !SourceGroup
+dir: .
+prefix: ${CMAKE_CURRENT_SOURCE_DIR}
+exclude_dirs: ["_build*"]
+include_directory: ${CMAKE_CURRENT_SOURCE_DIR}/../../
+source_group: Main
+mask: ["*.cpp", "*.h", mangl_config.h]
+
+
+#
+# Mangl
+#
+--- !SourceGroup
+dir: ${CONFIG_MANGL_DIR}/src/core
+prefix: ${CONFIG_MANGL_DIR}/src/core
+source_group: Mangl/Core
+mask: ["*.cpp", "*.h"]
+
+--- !SourceGroup
+dir: ${CONFIG_MANGL_DIR}/include
+prefix: ${CONFIG_MANGL_DIR}/include
+source_group: Mangl/Include
+mask: ["*.h"]
+
+
+# Windows group
+--- !SourceGroup
+dir: ${CONFIG_MANGL_DIR}/src/windows
+prefix: ${CONFIG_MANGL_DIR}/src/windows
+source_group: Mangl/Windows
+mask: ["*.cpp", "*.c", "*.h"]
+
+#
+# Apeal
+#
+--- !SourceGroup
+dir: ${CONFIG_APEAL_DIR}/src
+prefix: ${CONFIG_APEAL_DIR}/src
+source_group: Apeal
+files: [apeal_libpng.cpp, apeal_image.cpp]
+

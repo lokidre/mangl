@@ -1,0 +1,4 @@
+sources:
+
+  - dir: ${CONFIG_MANGL_DIR}/samples/multiplayer/shared
+    source_group: MultiplayerShared

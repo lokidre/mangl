@@ -1,0 +1,33 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "dist",
+
+        "target": "ESNext",
+        "module": "CommonJS",
+
+        "allowJs": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "noEmit": true,
+        "allowImportingTsExtensions": true,
+
+        "sourceMap": true,
+        "jsx": "react-jsx",
+        
+        "skipLibCheck": true,
+        
+        "noImplicitAny": true,
+
+        "paths": {
+            "*": ["node_modules/*"]
+        }
+    },
+
+    "typeRoots": ["./src/types"],
+    "include": ["src/**/*", "forge.config.ts", "webpack.*.config.ts"],
+    "exclude": ["node_modules", "build", "_build", "dist", "doc", "code", "**/*.spec.ts"],
+
+}

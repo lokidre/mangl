@@ -1,0 +1,68 @@
+
+config:
+  sections:
+    # - name: hardSection1
+    #   description: ""
+    #   properties:
+    #     - name: hardVar1
+    #       description: sd;fldl;flk
+    #       type: string
+    #       value: val1
+
+    - name: mySection3
+      description: descr3
+      properties:
+        - name: hardVar2
+          description: bbbbb
+          value: 2Val
+          type: string
+        - name: var3
+          description: ccccc
+          value: 3Val
+          type: string
+        - name: nNNANANANNA
+          description: dddd
+          value: sel1
+          type: selection
+          required: true
+          selection:
+            - sel1
+            - sel12
+            - sel3
+        - name: lala
+          description: dddd
+          value: lasel1
+          type: selection
+          selection:
+            - lasel1
+            - lasel12
+            - lasel3
+
+
+    
+    - name: Custom Section
+      description: "hardDescription2"
+      properties:
+        - name: "hardVar2"
+          description: "V21 description"
+          value: 'myVa2222;'
+          # type: "selection" 
+          # selection: ["sel1", "sel12", "sel3"]
+        
+        - name: "Var22"
+          description: "V22 description"
+          type: "string" 
+          value: 'myVa;'
+          # selection: ["sel1", "sel12", "sel3"]
+          
+        - name: "Imp2"
+          description: "IIIIMPPP description"
+          type: "string" 
+          value: 'myVaasmdnbamnsbd;'
+    
+    - name: MYYYYYYYYYYYYYYYY
+      description: "NYYYYYYYYY"
+      properties:
+        - name: "lalal"
+          description: "V21 description"
+          value: 'myVanananannna2222;'

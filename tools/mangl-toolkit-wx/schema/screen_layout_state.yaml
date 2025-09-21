@@ -1,0 +1,22 @@
+packet: 
+  header:
+    - include: state.hpp
+    - include: main_types.hpp
+    - include: apeal/singleton.hpp
+    - include: mangl/packet.h
+  root:
+    name: screenLayoutState
+    object: ScreenLayoutState
+
+  objects: 
+    - object: ScreenLayoutState
+      properties: 
+        - name: orientation
+          id: 1
+          sourceType: mangl::M::Orientation
+          packetType: int
+          defaultSkip: true
+          defaultValue: mangl::M::Orientation0
+        - name: zoom 
+          id: 2
+   

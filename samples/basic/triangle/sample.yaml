@@ -1,0 +1,54 @@
+project:
+  name: SampleTriangle
+  version: 0.0.1
+  build: 1
+
+  platform: iOS
+  deployment_target: 12.0
+  targeted_device_family: 1
+
+  other_cxxflags: "-faligned-allocation"
+
+  include_directories:
+    - ${CONFIG_MANGL_DIR}/samples
+  
+  compile_definitions: 
+    - MANGL_NEED_ALIGNED_NEW=1
+    - GLES_SILENCE_DEPRECATION
+
+  # mangl_config: ${CONFIG_SOURCE_DIR}/mangl_config.h
+
+  # app_icon_assets:        ${CONFIG_PENTIX_RES_DIR}/icon/pentix_nova/ios/Images.xcassets
+  # app_launch_storyboard:  ${CONFIG_PENTIX_RES_DIR}/launch/pentix_nova/ios/LaunchScreen.storyboard
+  # app_launch_assets:      ${CONFIG_PENTIX_RES_DIR}/launch/pentix_nova/ios/*.png
+
+
+xcode:
+  product_bundle_identifier: com.example.mangl.triangle
+  #development_team: U5448J2M89
+  #archs: arm64
+
+  infoplist_file: ${GENPROJ_PROJECT_CONFIG_DIR}/Sample-Info.plist
+
+  #clang_cxx_language_standard: c++2a
+  validate_workspace_skipped_sdk_frameworks: [OpenGLES]
+
+  shared_frameworks: [
+      # Essential
+      SystemConfiguration,
+      # Audio frameworks
+      AudioToolbox, AVFoundation, CoreAudio, OpenAL,
+      CoreMedia, MediaPlayer,
+      # Graphics
+      CoreGraphics, QuartzCore, 
+      OpenGLES,
+      Metal, MetalKit,
+      # Gui
+      UIKit,
+      # Requires for reviews
+      StoreKit,
+      # Game center
+      MessageUI,
+    ]
+
+  shared_libraries: [libxml2, libsqlite3, libz]

@@ -1,0 +1,116 @@
+project:
+  minSdk: 27
+  compileSdk: 36
+  targetSdk: 36
+  # buildToolsVersion: 35.0.1
+  buildToolsVersion: 36.0.0
+  # ndkVersion: 28.0.12674087
+  # ndkVersion: 28.0.12916984
+  # ndkVersion: 28.0.13004108
+  ndkVersion: 28.2.13676358
+  # cmakeVersion: 3.30.5
+  cmakeVersion: 4.1.0
+
+  root:
+    plugins:
+      - id: org.jetbrains.kotlin.android
+        version: 2.1.20
+        kotlin: true
+      - id: com.android.application
+        version: 8.9.1
+        # version: 8.12.2
+        groovy: true
+      - id: com.android.library
+        version: 8.9.1
+        # version: 8.12.2
+      - id: com.google.gms.google-services
+        version: 4.4.2
+        firebase: true
+      - id: com.google.firebase.crashlytics
+        version: 3.0.2
+        crashlytics: true
+
+  module:
+    plugins:
+      - id: com.android.application
+      - id: org.jetbrains.kotlin.android
+        kotlin: true
+      - id: com.google.gms.google-services
+        firebase: true
+      - id: com.google.firebase.crashlytics
+        crashlytics: true
+
+  # android:
+  #   compileSdk: 34
+  #   externalNativeBuild:
+  #     buildTypeDebug: true # false for Release
+  #     ndkVersion: 27.0.12077973
+  #     buildToolsVersion: 35.0.0
+
+  dependencies: 
+    - name: androidx.appcompat:appcompat
+      version: 1.7.1
+    - name: com.google.android.material:material
+      version: 1.12.0
+    - name: androidx.core:core-splashscreen
+      version: 1.0.1
+    - name: com.google.android.gms:play-services-games-v2
+      version: 21.0.0
+    # - name: com.google.android.gms:play-services-nearby
+    #   version: 19.3.0
+    #   multiplayer: true
+    - name: androidx.games:games-activity
+      version: 4.0.0
+    - name: androidx.core:core-ktx
+      version: 1.17.0
+      kotlin: true
+
+    - name: com.google.firebase:firebase-bom
+      version: 34.2.0
+      platform: true
+      firebase: true
+    - name: com.google.firebase:firebase-analytics
+      version: 23.0.0
+      firebase: true
+    - name: com.google.firebase:firebase-crashlytics
+      version: 20.0.1
+      crashlytics: true
+    - name: com.google.firebase:firebase-crashlytics-ndk
+      version: 20.0.1
+      crashlytics: true
+
+    - name: com.google.android.ump:user-messaging-platform 
+      version: 3.2.0
+      ads: true
+    - name: com.google.android.gms:play-services-ads-identifier
+      version: 18.2.0
+      ads: true
+    - name: com.google.android.gms:play-services-ads
+      version: 24.5.0
+      ads: true
+    - name: androidx.browser:browser
+      version: 1.8.0
+      # version: 1.9.0
+      ads: true
+    - name: androidx.annotation:annotation
+      version: 1.9.1
+      ads: true
+      
+    - name: com.google.ads.mediation:facebook
+      version: 6.20.0.0
+      ads: true
+    - name: com.google.ads.mediation:inmobi
+      version: 10.8.7.0
+      ads: true
+    - name: com.google.ads.mediation:mintegral
+      version: 16.9.91.1
+      ads: true
+    - name: com.google.ads.mediation:pangle
+      version: 7.5.0.2.0
+      ads: true
+    - name: com.google.ads.mediation:vungle
+      version: 7.5.1.0
+      ads: true
+    - name: com.google.ads.mediation:applovin
+      version: 13.3.1.1
+      ads: true

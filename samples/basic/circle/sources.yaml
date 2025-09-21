@@ -1,0 +1,6 @@
+sources:
+
+  - dir: .
+    files:
+      - sample_circle.cpp
+

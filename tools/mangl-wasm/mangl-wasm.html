@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+        <style>
+            :root {
+                /* --canvasWidth: 320px;
+                --canvasHeight: 568px; */
+                --canvasWidth: 414px;
+                --canvasHeight: 896px;
+                --chLight: #eee;
+                --chDark: peru;
+                --chSize: 64px;
+                --chSizeHalf: 32px;
+            }
+
+            #canvas {
+                width: var(--canvasWidth);
+                height: var(--canvasHeight);
+                border-style: solid;
+                border-width: 2px;
+                border-color: black;
+
+                background-color: #eee;
+                background-image: linear-gradient(45deg, var(--chDark) 25%, transparent 25%, transparent 75%, var(--chDark) 75%, var(--chDark)),
+                linear-gradient(45deg, var(--chDark) 25%, transparent 25%, transparent 75%, var(--chDark) 75%, var(--chDark));
+                background-size: var(--chSize) var(--chSize);
+                background-position: 0 0, var(--chSizeHalf) var(--chSizeHalf);
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <canvas id="wasm_canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+        <script type="text/javascript">
+            var onWasmError = (err) => {
+                alert(err);
+            };
+
+
+            var Module = {
+                noInitialRun: true, // do not call main()
+
+                canvas: (function() { return document.getElementById('wasm_canvas'); })(),
+
+                onRuntimeInitialized: () => {
+
+                    var canvas = document.getElementById('wasm_canvas');
+                    canvas.width = 414;
+                    canvas.height = 896;
+
+
+                    Module.initialize();
+                    Module.start();
+                },
+            };
+        </script>
+        <script src="rect.js"></script>
+        <!-- <p>Test</p> -->
+    </body>
+</html>
+

@@ -1,0 +1,18 @@
+packet: 
+  header:
+    - include: state.hpp
+    - include: main_types.hpp
+    - include: apeal/singleton.hpp
+  root:
+    name: windowLayoutState
+    object: WindowLayoutState
+
+  objects: 
+    - object: WindowLayoutState
+      properties: 
+        - name: size
+          id: 10
+          sourceType: 
+            w: double
+            h: double 
+          packetType: array   

@@ -1,0 +1,6 @@
+
+rule texmake
+    command = mangl-make-tex --input=$in --output=$out
+    description = Making texture $out
+
+build texture.yaml texture.png: texmake texture_desc.yaml

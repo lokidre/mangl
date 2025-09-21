@@ -1,0 +1,8 @@
+[requires]
+ gtk/4.7.0
+ glew/2.2.0
+ epoxy
+
+[generators]
+ cmake
+

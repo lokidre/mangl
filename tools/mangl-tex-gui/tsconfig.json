@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+      "baseUrl": "./src",
+      "outDir": "dist",
+
+      "module": "commonjs",
+
+      "allowJs": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+
+      "sourceMap": true,
+      
+      "jsx": "react",
+      "skipLibCheck": true,
+      
+      "noImplicitAny": true,
+      "downlevelIteration": true,
+
+      "composite": true,
+      "preserveSymlinks": true,
+
+
+      "paths": {
+          "*": ["node_modules/*"]
+      }
+  },
+  "typeRoots": ["./src/types"],
+  "include": ["src", "src/types"],
+  "exclude": ["node_modules", "build", "_build", "dist", "doc", "code", "**/*.spec.ts"],
+
+}

@@ -1,0 +1,65 @@
+# *** Automatically Generated *** DO NOT EDIT ***
+# * Generated Date: 2024-11-18
+
+include ../../../.build-config.ninja
+
+TEXTURES_DIR = ${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/textures
+RENDER_DIR = ${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/render
+RENDER_FONT_DIR = ${CONFIG_MANGL_SAMPLES_ASSETS_DIR}/render/fonts
+FONTS_DIR = ${CONFIG_MANGL_ASSETS_DIR}/fonts
+SRC_GEN_DIR = ${CONFIG_MANGL_SAMPLES_DIR}/common/generated
+
+DEPS_DIR = .deps
+
+texmake = mangl-make-tex
+fontmake = mangl-font-render
+
+FONTMAKE_PARAMS =
+TEXMAKE_PARAMS = 
+
+
+#
+# Rules
+#
+
+rule ninja
+    command = zx genbuild.mjs
+    description = Making build.ninja
+
+rule fontmake
+    command = $fontmake ${FONTMAKE_PARAMS} --input=$in --height=$height --output=$out
+    description = Making font $in
+
+rule texmake_h
+    command = $texmake ${TEXMAKE_PARAMS} --input=$in --define=ROOT=${CONFIG_MANGL_SAMPLES_ASSETS_DIR} --output=$out
+    description = Making texture $out
+
+rule texmake
+    depfile = .deps/$in.d
+    command = $texmake --input=$in --deps=.deps/$in.d --define=ROOT=${CONFIG_MANGL_SAMPLES_ASSETS_DIR} --output=$out
+    description = Making texture $out
+
+#
+# Generic builds
+#
+
+build build.ninja: ninja | samples-graphics.yaml
+
+#
+# Font dependencies
+#
+
+build ${RENDER_FONT_DIR}/guiFont.yaml ${RENDER_FONT_DIR}/guiFont.png: fontmake ${FONTS_DIR}/Refrigerator_Deluxe_Bold.otf
+    height = 32
+
+#
+# Texture dependencies
+#
+
+build ${SRC_GEN_DIR}/tex_common.hpp: texmake_h tex_common_desc.yaml | ${RENDER_FONT_DIR}/guiFont.yaml ${RENDER_FONT_DIR}/guiFont.png
+build ${TEXTURES_DIR}/tex_common.yaml ${TEXTURES_DIR}/tex_common.png: texmake tex_common_desc.yaml | ${RENDER_FONT_DIR}/guiFont.yaml ${RENDER_FONT_DIR}/guiFont.png
+
+build ${SRC_GEN_DIR}/tex_tutorial.hpp: texmake_h tex_tutorial_desc.yaml | ${RENDER_FONT_DIR}/guiFont.yaml ${RENDER_FONT_DIR}/guiFont.png
+build ${TEXTURES_DIR}/tex_tutorial.yaml ${TEXTURES_DIR}/tex_tutorial.png: texmake tex_tutorial_desc.yaml | ${RENDER_FONT_DIR}/guiFont.yaml ${RENDER_FONT_DIR}/guiFont.png
+
+

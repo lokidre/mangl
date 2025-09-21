@@ -1,0 +1,76 @@
+textures:
+  - file: tex_gui.png
+    size: [256,256]
+    image_format: RGBA
+    density: 1
+    total_images: 24
+    images:
+      - name: backgroundPaperElements
+        hash: 379e306cbd7723f811cc3d4d7bd8393d4f2c64fc8a5e5f0a418869005c0c1068
+        coords:
+          - rect: [204,105,50,3]
+          - rect: [204,110,50,3]
+          - rect: [179,241,50,3]
+      - name: difficultyDirectionLeft
+        hash: db7f247a28ee9ea801d0dff71815703f8fec398814b8a5b59182fe1e4a08c537
+        coords:
+          - rect: [204,1,50,50]
+      - name: difficultyDirectionRight
+        hash: 61441b8e12a814d3eae0a68e94f6560653397c14ef6dc006f34eded29d7cf71d
+        coords:
+          - rect: [204,53,50,50]
+      - name: gameStartButtonLabel
+        hash: fc24fc07d862a0b68407600afde749b1e57db47cd4868f5a14becf93ef8c6e09
+        coords:
+          - rect: [405,53,98,30]
+      - name: homePlayButtonLabel
+        hash: b0d50b0c25fa5e32bf06dd5217685c1f5829dc9f45e0092c82a0a7edceb187ae
+        coords:
+          - rect: [324,53,79,30]
+      - name: homeSettingsButton
+        hash: 6a2df056b21b93c5394924a48d3a22a361ba65e6f0c2231cb8be52931d121a25
+        coords:
+          - rect: [1,179,60,60]
+          - rect: [63,179,60,60]
+      - name: homeSoundsCheckbox
+        hash: d78aa96d2bb06ba85b57f9eb0eb0b2be6e9e50851a74f499c4cf81385e62a370
+        coords:
+          - rect: [1,117,60,60]
+          - rect: [63,117,60,60]
+          - rect: [125,117,60,60]
+          - rect: [187,117,60,60]
+      - name: homeTitle
+        hash: 92ffd80490001c23c81fff3971053983e36dc3f22d4cf231f9c30e488b536d2c
+        coords:
+          - rect: [2,1,200,114]
+      - name: homeTutorialButton
+        hash: 8159d94b02488f6920c1eaacc3edd24a8f11fada85a5fe43c5572bcac72d4faa
+        coords:
+          - rect: [125,179,60,60]
+          - rect: [187,179,60,60]
+      - name: navBackButton
+        hash: ba90d7cb544fa1bf39d95cfa66c492a08ad8284f8259d526972726dc8ced8324
+        coords:
+          - rect: [256,53,32,32]
+      - name: navCloseButton
+        hash: b96d90cb708b64bd728dfdb6b108f7c0edc9976acd94f3b18e2031ef0f32de91
+        coords:
+          - rect: [290,53,32,32]
+      - name: playerColorSelect
+        hash: f7a6715a5136f2230c7f2a76972e2115d7e4b06c5a954ef6aba83af5b7e8555f
+        coords:
+          - rect: [249,179,60,60]
+          - rect: [311,179,60,60]
+          - rect: [373,179,60,60]
+      - name: screenButtonIconDash
+        hash: ce1e02b536668ae5c6ebe148517cd75ffcf6a3a269bca17d70bd7c317d43213d
+        coords:
+          - rect: [559,179,60,54]
+      - name: screenButtonIconOneDevice
+        hash: 6b520a4f92a6887578c187ba0d8d09782c24f714ca5c934d13e772d3c2576c7b
+        coords:
+          - rect: [497,179,60,54]
+      - name: screenButtonIconVsComp
+        hash: cdaf6920c6b7f728de86407a38498418d33b1e5bff5cd57dadc1a872ddf518d3
+        coords:
+          - rect: [435,179,60,54]

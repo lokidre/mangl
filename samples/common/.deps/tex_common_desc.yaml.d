@@ -1,0 +1,135 @@
+/src/mangl/samples/common/tex_common.yaml:\
+  /Dropbox/irix/mangl/render/button.png\
+  /Dropbox/irix/mangl/render/button_pressed.png\
+  /Dropbox/irix/mangl/render/button_disabled.png\
+  /Dropbox/irix/mangl/render/button_label.png\
+  /Dropbox/irix/mangl/render/button_label_pressed.png\
+  /Dropbox/irix/mangl/render/button_label_disabled.png\
+  /Dropbox/irix/mangl/render/images/close_button_01.png\
+  /Dropbox/irix/mangl/render/images/close_button_02.png\
+  /Dropbox/irix/mangl/render/images/back_button_01.png\
+  /Dropbox/irix/mangl/render/images/back_button_02.png\
+  /Dropbox/irix/mangl/render/checkbox_on.png\
+  /Dropbox/irix/mangl/render/checkbox_off.png\
+  /Dropbox/irix/mangl/render/checkbox_on_pressed.png\
+  /Dropbox/irix/mangl/render/checkbox_off_pressed.png\
+  /Dropbox/irix/mangl/render/images/button_border_01.png\
+  /Dropbox/irix/mangl/render/images/button_border_04.png\
+  /Dropbox/irix/mangl/render/images/button_border_12.png\
+  /Dropbox/irix/mangl/render/images/button_border_10.png\
+  /Dropbox/irix/mangl/render/images/button_border_05.png\
+  /Dropbox/irix/mangl/render/images/button_border_02.png\
+  /Dropbox/irix/mangl/render/images/button_border_07.png\
+  /Dropbox/irix/mangl/render/images/button_border_11.png\
+  /Dropbox/irix/mangl/render/images/info_block_01.png\
+  /Dropbox/irix/mangl/render/images/info_block_02.png\
+  /Dropbox/irix/mangl/render/images/info_block_04.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_01.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_04.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_07.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_02.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_05.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_08.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_03.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_06.png\
+  /Dropbox/irix/mangl/render/images/segmented_widget_09.png\
+  /Dropbox/irix/mangl/render/images/slider_04.png\
+  /Dropbox/irix/mangl/render/images/slider_04.png\
+  /Dropbox/irix/mangl/render/images/slider_02.png\
+  /Dropbox/irix/mangl/render/images/slider_06.png\
+  /Dropbox/irix/mangl/render/images/slider_01.png\
+  /Dropbox/irix/mangl/render/images/slider_07.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_buttons_01.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_buttons_02.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_buttons_03.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_buttons_04.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_buttons_05.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_buttons_06.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_buttons_07.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_buttons_08.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_slider_04.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_slider_04.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_slider_02.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_slider_06.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_slider_01.png\
+  /Dropbox/irix/mangl/render/images/settings_screen_slider_07.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_09.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_03.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_11.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_16.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_01.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_05.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_17.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_15.png\
+  /Dropbox/irix/mangl/render/images/dialog_background_10.png\
+  /Dropbox/irix/mangl/render/brick_cover.png\
+  /Dropbox/irix/mangl/render/fonts/Refrigerator_Deluxe_Bold.yaml\
+  ./image_font.yaml\
+
+/Dropbox/irix/mangl/render/button.png:
+/Dropbox/irix/mangl/render/button_pressed.png:
+/Dropbox/irix/mangl/render/button_disabled.png:
+/Dropbox/irix/mangl/render/button_label.png:
+/Dropbox/irix/mangl/render/button_label_pressed.png:
+/Dropbox/irix/mangl/render/button_label_disabled.png:
+/Dropbox/irix/mangl/render/images/close_button_01.png:
+/Dropbox/irix/mangl/render/images/close_button_02.png:
+/Dropbox/irix/mangl/render/images/back_button_01.png:
+/Dropbox/irix/mangl/render/images/back_button_02.png:
+/Dropbox/irix/mangl/render/checkbox_on.png:
+/Dropbox/irix/mangl/render/checkbox_off.png:
+/Dropbox/irix/mangl/render/checkbox_on_pressed.png:
+/Dropbox/irix/mangl/render/checkbox_off_pressed.png:
+/Dropbox/irix/mangl/render/images/button_border_01.png:
+/Dropbox/irix/mangl/render/images/button_border_04.png:
+/Dropbox/irix/mangl/render/images/button_border_12.png:
+/Dropbox/irix/mangl/render/images/button_border_10.png:
+/Dropbox/irix/mangl/render/images/button_border_05.png:
+/Dropbox/irix/mangl/render/images/button_border_02.png:
+/Dropbox/irix/mangl/render/images/button_border_07.png:
+/Dropbox/irix/mangl/render/images/button_border_11.png:
+/Dropbox/irix/mangl/render/images/info_block_01.png:
+/Dropbox/irix/mangl/render/images/info_block_02.png:
+/Dropbox/irix/mangl/render/images/info_block_04.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_01.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_04.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_07.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_02.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_05.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_08.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_03.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_06.png:
+/Dropbox/irix/mangl/render/images/segmented_widget_09.png:
+/Dropbox/irix/mangl/render/images/slider_04.png:
+/Dropbox/irix/mangl/render/images/slider_04.png:
+/Dropbox/irix/mangl/render/images/slider_02.png:
+/Dropbox/irix/mangl/render/images/slider_06.png:
+/Dropbox/irix/mangl/render/images/slider_01.png:
+/Dropbox/irix/mangl/render/images/slider_07.png:
+/Dropbox/irix/mangl/render/images/settings_screen_buttons_01.png:
+/Dropbox/irix/mangl/render/images/settings_screen_buttons_02.png:
+/Dropbox/irix/mangl/render/images/settings_screen_buttons_03.png:
+/Dropbox/irix/mangl/render/images/settings_screen_buttons_04.png:
+/Dropbox/irix/mangl/render/images/settings_screen_buttons_05.png:
+/Dropbox/irix/mangl/render/images/settings_screen_buttons_06.png:
+/Dropbox/irix/mangl/render/images/settings_screen_buttons_07.png:
+/Dropbox/irix/mangl/render/images/settings_screen_buttons_08.png:
+/Dropbox/irix/mangl/render/images/settings_screen_slider_04.png:
+/Dropbox/irix/mangl/render/images/settings_screen_slider_04.png:
+/Dropbox/irix/mangl/render/images/settings_screen_slider_02.png:
+/Dropbox/irix/mangl/render/images/settings_screen_slider_06.png:
+/Dropbox/irix/mangl/render/images/settings_screen_slider_01.png:
+/Dropbox/irix/mangl/render/images/settings_screen_slider_07.png:
+/Dropbox/irix/mangl/render/images/dialog_background_09.png:
+/Dropbox/irix/mangl/render/images/dialog_background_03.png:
+/Dropbox/irix/mangl/render/images/dialog_background_11.png:
+/Dropbox/irix/mangl/render/images/dialog_background_16.png:
+/Dropbox/irix/mangl/render/images/dialog_background_01.png:
+/Dropbox/irix/mangl/render/images/dialog_background_05.png:
+/Dropbox/irix/mangl/render/images/dialog_background_17.png:
+/Dropbox/irix/mangl/render/images/dialog_background_15.png:
+/Dropbox/irix/mangl/render/images/dialog_background_10.png:
+/Dropbox/irix/mangl/render/brick_cover.png:
+/Dropbox/irix/mangl/render/fonts/Refrigerator_Deluxe_Bold.yaml:
+./image_font.yaml:
+

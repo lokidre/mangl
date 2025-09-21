@@ -1,0 +1,104 @@
+packet:
+  header:
+    - include: sample_game_packet.hpp
+
+  root:
+    name: SampleGamePacket
+    namespace: sample::mp
+
+  objects:
+    - name: SampleGamePacket 
+      properties:
+
+        #
+        # Message header
+        #
+        - name: type
+          type: enum 
+          object: mmp::MessageType
+          underlying: char
+
+        - name: cat
+          type: enum 
+          object: mmp::MessageCategory
+          underlying: char
+
+        - name: ord
+          type: enum 
+          object: mmp::MessageOrder
+          underlying: char
+
+
+
+        - name: messageId
+        - name: messageTime
+        - name: messageHash
+
+        #
+        # Error handling and generic parameters
+        #
+        - name: error
+          type: enum
+          object: mmp::MessageErrorCat
+          underlying: char
+        - name: code
+        - name: message
+        - name: value
+        - name: text
+        - name: time
+
+
+
+        #
+        # Match parameters
+        #
+        - name: matchStage
+          type: enum
+          object: mmp::MatchStage
+          underlying: int
+        - name: matchKey
+        - name: matchId
+        - name: players
+          type: vector
+          valueType: mmp::MpPacketPlayer
+
+        #
+        # Game state
+        - name: element
+          type: object
+          object: mmp::MpPacketElement
+
+        - name: elements
+          type: vector
+          valueType: mmp::MpPacketElement
+
+
+
+    - name: mmp::MpPacketPlayer
+      fields: [key, id, alias, name]
+
+    - name: mmp::MpPacketElement
+      properties: 
+        - name: key
+        - name: player
+        - name: type
+        - name: state
+        - name: color
+        - name: rect
+          type: object
+          object: Rect
+
+
+    - name: Point
+      fields: [x, y]
+    - name: PointI
+      fields: [x, y]
+    - name: Size
+      fields: [w, h]
+    - name: SizeI
+      fields: [w, h]
+    - name: Rect
+      fields: [x, y, w, h]
+    - name: RectI
+      fields: [x, y, w, h]
+

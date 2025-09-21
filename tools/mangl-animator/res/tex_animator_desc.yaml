@@ -1,0 +1,51 @@
+# Setup for texture animator
+defines:
+    - name: ROOT
+      value: ~/Dropbox/src/mangl/animator
+    - name: OUTPUT
+      value: .
+    - name: INPUT
+      value: $(ROOT)/render
+
+output:
+    file: $(OUTPUT)/tex_animator
+    size: [1024, 1024]
+
+images:
+    - name: checkerboard
+      file: $(INPUT)/checkerboard.png
+    - name: wood
+      file: $(INPUT)/wood.png
+    - name: bricks
+      file: $(INPUT)/images/bricks_[01-10].png 
+    - name: water
+      file: $(INPUT)/images/water_[001-015].png
+    - name: horz_gradient
+      file: $(INPUT)/horz_gradient.png
+    - name: vert_gradient
+      file: $(INPUT)/vert_gradient.png
+    - name: tri_gradient
+      file: $(INPUT)/tri_gradient.png
+
+fonts:
+    - name: display_font
+      file: $(INPUT)/fonts/BebasNeue_Bold.yaml
+
+#define = ROOT: ~/Dropbox/src/mangl/animator
+#define = OUTPUT: .
+#define = INPUT: $(ROOT)/render
+
+#output = $(OUTPUT)/tex_animator: 1024x1024
+
+
+#tex = checkerboard: $(INPUT)/checkerboard.png
+#tex = wood: $(INPUT)/wood.png
+#tex = bricks: $(INPUT)/images/bricks_[01-10].png
+#tex = water: $(INPUT)/images/water_[001-015].png
+
+#tex = horz_gradient: $(INPUT)/horz_gradient.png
+#tex = vert_gradient: $(INPUT)/vert_gradient.png
+#tex = tri_gradient: $(INPUT)/tri_gradient.png
+
+#font = display_font: $(INPUT)/fonts/BebasNeue_Bold.ini
+

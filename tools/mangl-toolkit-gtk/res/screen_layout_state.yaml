@@ -1,0 +1,21 @@
+packet: 
+  header:
+    - include: state.hpp
+    - include: main_types.hpp
+    - include: apeal/singleton.hpp
+    - include: mangl/packet.h
+  
+  root:
+    name: ScreenLayoutState
+    namespace: toolkit
+
+  objects: 
+    - name: ScreenLayoutState
+      properties: 
+        - name: orientation
+          type: enum
+          enum: mangl::M::Orientation
+          underlying: int
+          defaultValue: mangl::M::Orientation0
+
+        - name: zoom

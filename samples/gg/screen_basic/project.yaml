@@ -1,0 +1,65 @@
+sources:
+  - dir: .
+    prefix: ${CMAKE_CURRENT_SOURCE_DIR}
+    exclude_directories: ["_build*"]
+    include_directories: "${CMAKE_CURRENT_SOURCE_DIR}"
+    resource_group: Config
+    files: [mangl_config.h]
+    mask: ["*.h", "*.hpp"]
+
+#  - dir: ${CONFIG_COLUMNS_SRC_DIR}
+#    source_group: Columns
+#    include_directories: ${CONFIG_COLUMNS_SRC_DIR}
+#    mask: ["*.cpp", "*.h"]
+
+  - dir: ${GENPROJ_PROJECT_CONFIG_DIR}
+    prefix: ${GENPROJ_PROJECT_CONFIG_DIR}
+    exclude_directories: ["_build*"]
+    include_directories: ${GENPROJ_PROJECT_CONFIG_DIR}
+    source_group: Main
+    mask: ["*.cpp", "*.h"]
+
+
+
+  - dir: ${CONFIG_MANGL_DIR}/src/core
+    source_group: Mangl/core
+    mask: ["*.cpp", "*.h", "*.hpp"]
+
+
+  - if: WIN32 OR ANDROID
+    dir: ${CONFIG_MANGL_DIR}/src/3rdparty
+    source_group: Mangl/3rdparty
+    mask: ["sqlite3.*"]
+
+# Windows group
+
+  - if: WIN32
+    dir: ${CONFIG_MANGL_DIR}/src/windows
+    source_group: Mangl/windows
+    mask: ["*.cpp", "*.h", "*.hpp"]
+
+# Apeal
+
+  - dir: ${CONFIG_APEAL_DIR}/src
+    source_group: Apeal/src
+    files: [apeal_base58.cpp, apeal_uid.cpp, apeal_uuid.cpp]
+
+  - if: WIN32
+    dir: ${CONFIG_APEAL_DIR}/src
+    source_group: Apeal/src
+    mask: ["apeal_image*.cpp"]
+
+  - dir: ${CONFIG_APEAL_DIR}/include/apeal
+    source_group: Apeal/hpp
+    mask: ["*.hpp", "*.h"]
+
+
+
+# Cognit
+
+  - dir: ${CONFIG_COGNIT_DIR}/include/cognit
+    source_group: Cognit/hpp
+    mask: ["*.hpp", "*.h"]
+
+
+

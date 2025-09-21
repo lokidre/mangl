@@ -1,0 +1,38 @@
+config:
+  sections:
+    - name: "hardSection1"
+      properties:
+        - name: "hardVar1"
+          description: "sd;fldl;flk"
+          type: "string" #string | int | bool | real | selection
+          value: "val1" 
+        - name: "imposterVar1"
+          description: "sd;fldl;flk"
+          type: "string" #string | int | bool | real | selection
+          value: "val1" 
+
+    - name: "mySection3"
+      description: "descr3"
+      properties:
+        - name: "hardVar2"
+          description: "bbbbb"
+          value: "2Val" 
+          type: "string" 
+
+        - name: "var3"
+          description: "ccccc"
+          value: "3Val" 
+          type: "string" 
+
+        - name: "nNNANANANNA"
+          description: "dddd"
+          value: "sel1" 
+          type: "selection" 
+          selection: ["sel1", "sel12", "sel3"]
+    - name: "mySection4"
+      description: "descr3"
+      properties:
+        - name: "hardVar3"
+          description: "mmmm"
+          value: "123154" 
+          type: "int" 

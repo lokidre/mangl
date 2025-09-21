@@ -1,0 +1,38 @@
+# Zchess Game elements
+defines:
+  - name: ROOT
+    value: ~/Dropbox/irix/mangl/maketex
+    
+  - name: OUTPUT
+    value: $(ROOT)/textures
+  - name: INPUT
+    value: $(ROOT)/render
+  - name: IMAGES
+    value: $(ROOT)/render/images
+
+class:
+  name: SampleTexture
+  namespace: maketex
+
+output:
+  file: $OUTPUT/tex_sample
+  size: [2048, 2048]
+  
+
+images:
+  - name: squareRandom
+    files: $INPUT/square_random_[001-100]
+  - name: squareRandomV
+    files: $INPUT/square_random_vertical_[001-050]
+  - name: squareRandomH
+    files: $INPUT/square_random_horizontal_[001-250]
+  - name: player_chess_color_select
+    files: $INPUT/player_color_select_[01-03]
+  - name: button
+    files:
+      - $INPUT/button
+      - $INPUT/button_pressed
+      - $INPUT/button_disabled
+
+  - name: square_random
+    files: $INPUT/square_random_[001-100]

@@ -1,0 +1,31 @@
+packet: 
+  header:
+    - include: state.hpp
+    - include: main_types.hpp
+    - include: apeal/singleton.hpp
+    - include: mangl/packet.h
+
+  root:
+    name: ModelViewState
+    namespace: toolkit
+
+  objects: 
+    - name: ModelViewState
+      properties:
+        - name: ambientColor
+          defaultSkip: true
+          defaultValue: mangl::M::Black
+        - name: diffuseColor
+          defaultSkip: true
+          defaultValue: mangl::M::Red
+        - name: specularColor
+          defaultSkip: true
+          defaultValue: mangl::M::Blue
+        - name: shininess 
+          defaultValue: 32
+        - name: wireframe
+        - name: vertices
+        - name: faceCulling
+        - name: depthTest
+        - name: lighting
+   

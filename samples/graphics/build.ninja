@@ -1,0 +1,32 @@
+include .build-config.ninja
+
+TEXTURES_DIR = ${CONFIG_APP_ASSETS_DIR}/textures
+RENDER_DIR = ${CONFIG_APP_ASSETS_DIR}
+SRC_GEN_DIR = ${CONFIG_APP_SRC_DIR}
+
+DEPS_DIR = .deps
+
+texmake = mangl-make-tex
+
+#
+# Rules
+#
+
+rule ninja
+    command = zx genbuild.mjs
+    description = Making build.ninja
+
+rule texmake_h
+    command = $texmake --input=$in --define=ROOT=${CONFIG_APP_ASSETS_DIR} --output=$out
+    description = Making texture $out
+
+rule texmake
+    depfile = .deps/$in.d
+    command = $texmake --input=$in --deps=.deps/$in.d --define=ROOT=${CONFIG_APP_ASSETS_DIR} --output=$out
+    description = Making texture $out
+
+#
+# Texture dependencies
+#
+build ${SRC_GEN_DIR}/tex_gui.hpp: texmake_h tex_gui_desc.yaml
+build ${TEXTURES_DIR}/tex_gui.yaml ${TEXTURES_DIR}/tex_gui.png: texmake tex_gui_desc.yaml

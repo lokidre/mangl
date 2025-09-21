@@ -1,0 +1,67 @@
+
+resources:
+  namespace: mangl 
+
+  music:
+    - id: NightInKyoto
+      alias: Welcome
+      file: night-in-kyoto-avbe-main-version-21302-01-57
+    - id: NoTimeToDie
+      file: no-time-to-die-hartzmann-main-version-9251-02-01
+    - id: NostalgicMoment
+      file: nostalgic-moment-monument-music-main-version-21355-03-05
+
+    - id: BoundAndDetermined
+      file: music_bound_and_determined
+    - id: DistantHorizon
+      file: music_distant_horizon
+    - id: EyesAhead
+      file: music_eyes_ahead
+    - id: MountainsOfMars
+      file: music_the_mountains_of_mars
+    - id: UnderCover
+      file: music_under_cover
+    - id: UnravelingTheMystery
+      file: music_unraveling_the_mystery
+
+  sfx: 
+    - id: Button
+      file: computerkeyboardtypingsingle_1_51195
+    - id: Level
+      file: science_fiction_magical_wand_wave_pixie_dust_sparkle_shimmer_delay_01_43998
+    - id: Drop
+      file: movie_things_falling_down_crumble_56719
+    - id: Rotate
+      file: sound_rotate
+    - id: LineClear
+      file: crashcupboard_bw.17164
+    - id: LineClear2
+      file: crashglass_bw.17239
+    - id: LineClear3
+      file: crashcrtmonitor_bw.60466
+    - id: Countdown1
+      file: countdown_4
+    - id: Countdown2
+      file: countdown_3
+    - id: Countdown3
+      file: countdown_2
+    - id: Countdown4
+      file: countdown_1
+    - id: Win
+      file: success02
+    - id: Move
+      file: foley_wood_stick_whip_whoosh_01_26769
+    - id: HighScore
+      file: sound_high_score
+    - id: MissionComplete
+      file: success02
+    - id: ConcreteCrush
+      file: bone_crush_01
+    - id: GemCollect
+      file: nicechime
+    - id: Fireworks
+      file: fireworks_1
+    - id: GameOver
+      file: outofluck
+    - id: GameOver2
+      file: game_over

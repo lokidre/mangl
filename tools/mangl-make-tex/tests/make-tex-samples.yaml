@@ -1,0 +1,23 @@
+graphics:
+  texturesDir: "$(CONFIG_MANGL_SAMPLES_RESOURCES_DIR)/maketex/textures"
+  renderDir: "$(CONFIG_MANGL_SAMPLES_RESOURCES_DIR)/maketex/render"
+  renderFontsDir: "$(CONFIG_MANGL_SAMPLES_RESOURCES_DIR)/maketex/render"
+  fontsDir: "$(CONFIG_MANGL_SAMPLES_RESOURCES_DIR)/fonts"
+  srcGenDir: "./generated"
+  generator: zx genbuild.mjs
+
+  
+
+  fonts:
+    - name: guiFont
+      #file: Refrigerator_Deluxe_Bold.otf
+      #file: Oswald-Regular.ttf
+      file: RobotoCondensed-SemiBold.ttf
+
+      height: 32
+
+  textures:
+    - name: tex_sample
+#    - name: tex_game
+#    - name: tex_gui
+#    - name: tex_tutorial

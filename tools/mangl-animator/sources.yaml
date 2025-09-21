@@ -1,0 +1,15 @@
+sources: 
+
+  - dir: src
+    prefix: ${CMAKE_CURRENT_LIST_DIR}/src
+    include_directories: ${CMAKE_CURRENT_LIST_DIR}/src
+    source_group: Animator
+    mask: ["*.cpp", "*.c", "*.h", "*.hpp"]
+
+    # Resource files
+  - dir: res
+    prefix: ${CMAKE_CURRENT_LIST_DIR}/res
+    include_directories: ${CMAKE_CURRENT_LIST_DIR}/res
+    resource_group: Resources
+    files: [animator.rc, animator.qrc, resource.h]
+

@@ -1,0 +1,6 @@
+--- !Header
+vars:
+  - {name: var1, value: 2}
+  - {name: var2, value: some text}
+...
+

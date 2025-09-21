@@ -1,0 +1,36 @@
+packet:
+  header:
+    - include: nested_object.h
+
+  generate:
+    string: true
+    file: true
+
+  objects:
+    - name: NestedObject
+      properties:
+        - name: charVal
+        - name: ucharVal
+        - name: intVal
+        - name: uintVal
+        - name: floatVal
+        - name: doubleVal
+
+        - name: subVal
+          type: object
+          object: SubObject
+
+
+    - name: SubObject
+      properties:
+        - name: vectorVal
+          type: vector
+
+        - name: subSubVal
+          type: object
+          object: SubSubObject
+
+    - name: SubSubObject
+      properties:
+        - name: mapVal
+          type: map

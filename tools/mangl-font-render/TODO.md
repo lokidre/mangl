@@ -1,0 +1,7 @@
+- make GUI version
+- add drop shadow effect
+- add outer glow effect
+- add 3D effect
+- add contours generation
+- add coloring of the font and contour
+- add texture fill for fill and contour

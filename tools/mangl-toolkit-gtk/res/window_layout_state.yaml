@@ -1,0 +1,16 @@
+packet:
+  header:
+    - include: state.hpp
+    
+  root:
+    name: WindowLayoutState
+    namespace: toolkit
+
+  objects:
+    - name: WindowLayoutState
+      properties:
+        - name: size
+          object: SizeI
+
+    - name: SizeI
+      fields: [w, h]

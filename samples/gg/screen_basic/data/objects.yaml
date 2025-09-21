@@ -1,0 +1,47 @@
+function:
+  block:
+    - op: nop
+    - op: if
+      condition: 
+        operator: 
+          type: minus
+          arg1: 
+            type: value
+            value: 5 
+          arg2:
+            type: variable 
+            value: 3.right 
+      block:
+        - op: nop
+        - op: delay
+      else: # block
+        - op: nop
+        - op: nop
+    - op: while
+      condition: 
+        operator: 
+          type: minus
+          arg1:
+            type: expression
+            value:
+              operator: 
+                type: unary_minus
+                arg1: 
+                  type: value
+                  value: 30
+          arg2:
+            type: variable
+            value: 4.left
+      block:
+        - op: nop
+    - op: if
+      condition: 
+        operator: 
+
+    - op: move
+      args:
+        id: 1
+        by: [0,7] #inchqanov   [x,y]
+        to: [4,5] #te ur gna pointov, es depqum x,y partadir en
+
+    - op: resize

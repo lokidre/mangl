@@ -1,0 +1,21 @@
+defines:
+  - name: ROOT
+    value: .
+  - name: OUTPUT
+    value: $(ROOT)
+  - name: INPUT
+    value: $(ROOT)
+
+class:
+  name: SampleTexture
+  namespace: generated
+
+
+
+output:
+  file: $(OUTPUT)
+  size: [2048, 2048]
+
+images:
+  - name: lenna
+    file: 1024px-Lenna.png
